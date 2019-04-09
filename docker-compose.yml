@@ -10,3 +10,4 @@ services:
     volumes:
       - ./certs:/etc/nginx/certs
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./custom_nginx.conf:/etc/nginx/conf.d/custom_nginx.conf:ro
