@@ -1,7 +1,7 @@
 version: '2'
 services:
   frontproxy:
-    image: 'jwilder/nginx-proxy:latest'
+    build: .
     container_name: frontproxy
     restart: always
     ports:
@@ -10,4 +10,3 @@ services:
     volumes:
       - ./certs:/etc/nginx/certs
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ./custom_nginx.conf:/etc/nginx/conf.d/custom_nginx.conf:ro
